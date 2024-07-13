@@ -2439,11 +2439,15 @@ function to(p)
 	end
 
 local ScreenGui = Instance.new("ScreenGui")
-local ImageButton = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
+local ImageButton = Instance.new("ImageButton")
+local isToggled = Instance.new("isToggled")
 
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+UICorner.CornerRadius = UDim.new(0, 3)
+UICorner.Parent = ImageButton
 
 ImageButton.Parent = ScreenGui
 ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -2452,11 +2456,9 @@ ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 ImageButton.Size = UDim2.new(0, 75, 0, 75)
 ImageButton.Draggable = true
 ImageButton.Image = "rbxassetid://18470453355"
-UICorner.CornerRadius = UDim.new(0, 3)
-UICorner.Parent = ImageButton
-local isButton = false
+isToggled = false
 local function()
-isButton = not isButton
+isToggled = not isToggled
 	if isButton the
 ImageButton.Image = "rbxassetid://18470453355"
 	else
